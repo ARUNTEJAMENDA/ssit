@@ -736,6 +736,14 @@ td{
 #six div input::placeholder{
     padding:5%;
 }
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+.shower{
+    display: flex !important;
+}
+.hider{
+    display: none !important;
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 /* -------------------------------- */
 @media screen and (max-width:700px){
     *{

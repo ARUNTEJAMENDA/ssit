@@ -28,20 +28,20 @@
     </section>
     <section id="bottom">
         <nav>
-            <a href="#"><li id="dashboard" onclick="go(this.id);"><img class="icons" src="warehouse/Speed.png" alt="dashboard"> Dashboard</li></a>
-            <a href="#"><li id="courses" onclick="go(this.id);"><img class="icons" src="warehouse/Course.png" alt="courses"> Courses</li></a>
-            <a href="#"><li id="schedule" onclick="go(this.id);"><img class="icons" src="warehouse/Schedule.png" alt="schedule"> Schedule</li></a>
-            <a href="#"><li id="profile" onclick="go(this.id);"><img class="icons" src="warehouse/User.png" alt="profile"> Profile</li></a>
-            <a href="#"><li id="resources" onclick="go(this.id);"><img class="icons" src="warehouse/Book.png" alt="resources"> Resources</li></a>
-            <a href="#"><li id="notification" onclick="go(this.id);"><img class="icons" src="warehouse/Alarm.png" alt="notifications"> Notifications</li></a>
-            <a id="logout" href="logout.php" onclick="go(this.id);"><li><img class="icons" src="warehouse/Logout.png" alt="logout"> Logout</li></a>
+            <a class="dashboard" href="#"><li id="dashboard" ><img class="icons" src="warehouse/Speed.png" alt="dashboard"> Dashboard</li></a>
+            <a class="courses" href="#"><li id="courses" ><img class="icons" src="warehouse/Course.png" alt="courses"> Courses</li></a>
+            <a class="schedule" href="#"><li id="schedule" ><img class="icons" src="warehouse/Schedule.png" alt="schedule"> Schedule</li></a>
+            <a class="profile" href="#"><li id="profile" ><img class="icons" src="warehouse/User.png" alt="profile"> Profile</li></a>
+            <a class="resources" href="#"><li id="resources" ><img class="icons" src="warehouse/Book.png" alt="resources"> Resources</li></a>
+            <a class="notification" href="#"><li id="notification" ><img class="icons" src="warehouse/Alarm.png" alt="notifications"> Notifications</li></a>
+            <a class="logout" href="logout.php" ><li id="logout"><img class="icons" src="warehouse/Logout.png" alt="logout"> Logout</li></a>
         </nav>
         <main id="main" name="main">
         <!-- <main id="main" style="display:none;"> -->
             <!-- doubt how to do navigation!! -->
             <!--  -->
             <!---------------------------------------------------------------------------->
-            <div class="conbox" id="dashboard_box"  style="display:flex;">
+            <div class="shower" id="dashboard_box">
                 <div id="courses_offered">
                     <p id="dp"><img class="dash_ico" src="warehouse/Course.png" alt="courses"><span id="co_num">99</span></p>
                     <span id="coh">Courses Offered</span>
@@ -56,7 +56,7 @@
                 </div>
             </div>
             <!---------------------------------------------------------------------------->
-            <div class="conbox" id="courses_box" >
+            <div id="courses_box" >
                 <section id="workshops">
                     <div id="w_one"><span id="zx">Workshops</span><button class="add_new">Add New +</button></div>
                     <div id="w_two">
@@ -107,7 +107,7 @@
                 </section>
             </div>
             <!---------------------------------------------------------------------------->
-            <div class="conbox" id="addcourses_box" >
+            <div id="addcourses_box" >
                 <!------------------->
                 <div id="heading">
                     <h1>Courses/Internships</h1>
@@ -155,12 +155,12 @@
                 <!--------------------------------->
             </div>
             <!---------------------------------------------------------------------------->
-            <div class="conbox" id="schedule_box"></div>
+            <div id="schedule_box"></div>
             <!---------------------------------------------------------------------------->
-            <div class="conbox" id="profile_box">
+            <div id="profile_box">
                 <div id="one">
                     <div id="one_left"><img id="profile_pic" src="warehouse/profile (2)..png" alt="profile_pic"><span><img src="warehouse/Camera.png" alt="icon" id="icon"></span></div>
-                    <div id="one_right"><button id="cover_pic"><img src="warehouse/Edit Image.png" alt="icon" id="icon"> Edit Cover Image</button></div>
+                    <div id="one_right"><buttonid="cover_pic"><img src="warehouse/Edit Image.png" alt="icon" id="icon"> Edit Cover Image</button></div>
                 </div>
                 <div id="two"><input type="text" name="first_name" id="fname" placeholder="First Name"><input type="text" name="middle_name" id="mname" placeholder="Middle Name"><input type="text" name="last_name" id="lname" placeholder="Last Name"></div>
                 <div id="three"><textarea name="user_description" id="user_description" cols="30" rows="10" placeholder="Describe Your Self ........."></textarea></div>
@@ -192,7 +192,7 @@
                 </div>
             </div>
             <!---------------------------------------------------------------------------->
-            <div class="conbox" id="resources_box">
+            <div id="resources_box">
                 <div id="rbtop"><span id="rheading">Resources</span></div>
                 <div id="rbbottom">
                     <table>
@@ -204,7 +204,7 @@
                 </div>
             </div>
             <!---------------------------------------------------------------------------->
-            <div class="conbox" id="addresources_box">
+            <div id="addresources_box">
                 <div id="rtop"><span id="rheading">Resources/New item</span></div>
                 <div id="rbottom"><!--▶◼▸-->
                     <li><div id="resource_title"><span class="xz">▸&nbsp Resource Title</span><!-----><input type="text" name="rt" id="rt" placeholder="Title"></div>
@@ -215,16 +215,14 @@
                 </div>
             </div>
             <!---------------------------------------------------------------------------->
-            <div class="conbox" id="notifications_box"></div>
+            <div  id="notifications_box"></div>
             <!---------------------------------------------------------------------------->
         </main>
     </section>
     <script>
-        function go(id){
-            // alert(id+"_box");
-            document.getElementById(id+"_box").style.display="flex";
-            $("#main").load("ins_dashboard.php #"+id+"_box");
-        }
+        $("nav a").click(function(){
+            alert(this.className);
+        });
     </script>
 </body>
 </html>
