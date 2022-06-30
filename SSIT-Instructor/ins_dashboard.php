@@ -160,7 +160,7 @@
             <div id="profile_box">
                 <div id="one">
                     <div id="one_left"><img id="profile_pic" src="" alt="profile_pic"><span><img src="warehouse/Camera.png" alt="icon" id="icon"></span></div>
-                    <div id="one_right"><buttonid="cover_pic"><img src="warehouse/Edit Image.png" alt="icon" id="icon"> Edit Cover Image</button></div>
+                    <div id="one_right"><button id="cover_pic"><img src="warehouse/Edit Image.png" alt="icon" id="icon"> Edit Cover Image</button></div>
                 </div>
                 <div id="two"><input type="text" name="first_name" id="fname" placeholder="First Name"><input type="text" name="middle_name" id="mname" placeholder="Middle Name"><input type="text" name="last_name" id="lname" placeholder="Last Name"></div>
                 <div id="three"><textarea name="user_description" id="user_description" cols="30" rows="10" placeholder="Describe Your Self ........."></textarea></div>
