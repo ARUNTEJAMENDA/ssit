@@ -28,13 +28,13 @@
     </section>
     <section id="bottom">
         <nav>
-            <a class="dashboard" href="#"><li id="dashboard" ><img class="icons" src="warehouse/Speed.png" alt="dashboard"> Dashboard</li></a>
-            <a class="courses" href="#"><li id="courses" ><img class="icons" src="warehouse/Course.png" alt="courses"> Courses</li></a>
-            <a class="schedule" href="#"><li id="schedule" ><img class="icons" src="warehouse/Schedule.png" alt="schedule"> Schedule</li></a>
-            <a class="profile" href="#"><li id="profile" ><img class="icons" src="warehouse/User.png" alt="profile"> Profile</li></a>
-            <a class="resources" href="#"><li id="resources" ><img class="icons" src="warehouse/Book.png" alt="resources"> Resources</li></a>
-            <a class="notification" href="#"><li id="notification" ><img class="icons" src="warehouse/Alarm.png" alt="notifications"> Notifications</li></a>
-            <a class="logout" href="logout.php" ><li id="logout"><img class="icons" src="warehouse/Logout.png" alt="logout"> Logout</li></a>
+            <a class="dashboard" href="#"><li id="dashboard" class="me"><img class="icons" src="warehouse/Speed.png" alt="dashboard"> Dashboard</li></a>
+            <a class="courses" href="#"><li id="courses" class="me"><img class="icons" src="warehouse/Course.png" alt="courses"> Courses</li></a>
+            <a class="schedule" href="#"><li id="schedule" class="me"><img class="icons" src="warehouse/Schedule.png" alt="schedule"> Schedule</li></a>
+            <a class="profile" href="#"><li id="profile" class="me"><img class="icons" src="warehouse/User.png" alt="profile"> Profile</li></a>
+            <a class="resources" href="#"><li id="resources" class="me"><img class="icons" src="warehouse/Book.png" alt="resources"> Resources</li></a>
+            <a class="notification" href="#"><li id="notification" class="me"><img class="icons" src="warehouse/Alarm.png" alt="notifications"> Notifications</li></a>
+            <a class="logout" href="logout.php" ><li id="logout" class="me"><img class="icons" src="warehouse/Logout.png" alt="logout"> Logout</li></a>
         </nav>
         <main id="main" name="main">
         <!-- <main id="main" style="display:none;"> -->
@@ -159,7 +159,7 @@
             <!---------------------------------------------------------------------------->
             <div id="profile_box">
                 <div id="one">
-                    <div id="one_left"><img id="profile_pic" src="warehouse/profile (2)..png" alt="profile_pic"><span><img src="warehouse/Camera.png" alt="icon" id="icon"></span></div>
+                    <div id="one_left"><img id="profile_pic" src="" alt="profile_pic"><span><img src="warehouse/Camera.png" alt="icon" id="icon"></span></div>
                     <div id="one_right"><buttonid="cover_pic"><img src="warehouse/Edit Image.png" alt="icon" id="icon"> Edit Cover Image</button></div>
                 </div>
                 <div id="two"><input type="text" name="first_name" id="fname" placeholder="First Name"><input type="text" name="middle_name" id="mname" placeholder="Middle Name"><input type="text" name="last_name" id="lname" placeholder="Last Name"></div>
@@ -215,13 +215,21 @@
                 </div>
             </div>
             <!---------------------------------------------------------------------------->
-            <div  id="notifications_box"></div>
+            <div id="notification_box"></div>
+            <!---------------------------------------------------------------------------->
+            <div id="logout_box"></div>
             <!---------------------------------------------------------------------------->
         </main>
     </section>
     <script>
+        $("#dashboard").addClass("navhighlighter");
         $("nav a").click(function(){
-            alert(this.className);
+            $("#dashboard").removeClass("navhighlighter");
+            //
+            $("#"+this.className+"_box").addClass("shower").siblings().removeClass("shower");
+            // alert(this.className);
+            $(".me").removeClass("navhighlighter");
+            $("#"+this.className).addClass("navhighlighter");
         });
     </script>
 </body>

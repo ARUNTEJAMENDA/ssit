@@ -119,10 +119,6 @@ a{
     color:black;
     font-weight:bold;
 }
-a:hover li,a:active li{
-    background:rgb(233, 237, 242);
-    border-left: 3px solid rgb(2, 44, 70);
-}
 .icons{
     height:40%;
     margin: 0 5% 0 0;
@@ -743,6 +739,11 @@ td{
 .hider{
     display: none !important;
 }
+a:hover li,.navhighlighter{
+    background:rgb(233, 237, 242);
+    border-left: 3px solid rgb(2, 44, 70);
+}
+
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 /* -------------------------------- */
 @media screen and (max-width:700px){
